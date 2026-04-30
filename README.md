@@ -27,64 +27,65 @@ AI-помощник для обработки текста. Работает в 
 
 ## 🦉 OwlMind VPN — Обход Великого файрвола Китая
 
-**One-click VPN.** Скачал → ввёл email → нажал Connect → готово.
-Никакого Clash Verge, v2rayNG или других программ — всё встроено.
+**System-wide VPN для Mac и Windows.** Скачал → ввёл email → нажал Connect → готово.
+
+После Connect **весь Mac работает через VPN автоматически** — Telegram, YouTube, Discord, Claude Code, любые приложения. Без настройки прокси в каждой программе.
 
 ### Цены
 
-| Тариф | Цена | Что включено |
-|-------|------|--------------|
-| 🎁 **Trial** | **$0 на 3 дня** | 50 GB · 2 устройства · без карты |
-| ⚡ **Pro** | **$5 / месяц** | Безлимит · 5 устройств · приоритетная поддержка |
+| Тариф | Цена        | Что включено                                        |
+| ----- | ----------- | --------------------------------------------------- |
+| Trial | $0 / 3 дня  | Безлимит · все серверы · без карты                  |
+| Pro   | $5 / месяц  | Безлимит · авто-обновления · приоритетная поддержка |
 
-### Скачать v1.2.0
+[**Купить Pro за $5/мес →**](https://whop.com/checkout/plan_IRLJR8tu7mrSq)
 
-**Через сайт (рекомендуется):**
+### Скачать (последняя версия)
 
-- 🌐 **<https://license.muravey.app/owlmind>** — главная страница со всеми ссылками
-
-**Прямые ссылки (работают из Китая):**
-
-- 🍎 [**OwlMind-VPN-macos.dmg**](https://vpn.muravey.app:8443/clients/OwlMind-VPN-macos.dmg) — Mac (61 MB)
-- 🪟 [**OwlMind.VPN.exe**](https://vpn.muravey.app:8443/clients/OwlMind.VPN.exe) — Windows (37 MB)
-- 🤖 [**v2rayng-arm64.apk**](https://vpn.muravey.app:8443/clients/v2rayng-arm64.apk) — Android (через v2rayNG, native в разработке)
-- 📱 iPhone — [Streisand](https://apps.apple.com/app/streisand/id6450534064) из App Store
-
-**Mac — установка одной командой:**
+**🍎 Mac — одной командой в Terminal (1 минута):**
 
 ```bash
-curl -fsSL https://vpn.muravey.app:8443/install.sh | bash
+curl -L https://gh.idayer.com/https://github.com/MuraveyApp/muravey-releases/releases/latest/download/terminal_install_macos.sh | bash
 ```
 
-Скрипт автоматически: скачает → установит → обойдёт Gatekeeper → запустит.
+Скрипт автоматически: скачает DMG → установит в /Applications → снимет Gatekeeper-карантин → запустит. Работает в Китае через CDN-mirror.
 
-### Технологии
+**🪟 Windows — прямая ссылка:**
 
-- **VLESS + REALITY + Vision** (Xray-core 26.4) — маскировка под обычный HTTPS
-- **Встроенный xray-core** — никаких сторонних программ не нужно
-- **System tray** — приложение работает в фоне
-- **Auto-reconnect** — автоматическое переподключение при разрыве
-- **CN2 GIA Premium** routing — 20-35ms пинг из Китая, до 4 Gbps
-- **97% uptime** даже во время "закруток" GFW
+- [**OwlMind VPN.exe**](https://github.com/MuraveyApp/muravey-releases/releases/latest/download/OwlMind.VPN.exe) (~50 MB) — двойной клик и готово
+
+**📱 iPhone / Android — через готовые клиенты:**
+
+- iPhone: [Shadowrocket](https://apps.apple.com/app/shadowrocket/id932747118) ($2.99) или [Streisand](https://apps.apple.com/app/streisand/id6450534064) — paste subscription URL из app
+- Android: [V2rayNG](https://github.com/2dust/v2rayNG/releases) — то же
+
+(Native iOS / Android apps готовятся — ETA 2-3 недели.)
+
+[**📦 Все релизы и changelog**](https://github.com/MuraveyApp/muravey-releases/releases)
+
+### Что внутри
+
+- **VLESS + REALITY + Vision** — маскировка под обычный microsoft.com HTTPS трафик. GFW не отличает от обычной TLS-сессии.
+- **System-wide TUN tunnel** на Mac — все приложения автоматом, без per-app настроек
+- **Auto-updater** — следующие версии прилетают сами, один клик в трее
+- **Split tunnel для Claude Code** — твоя AI-сессия не ломается при Connect/Disconnect
+- **China-friendly install** — работает даже без сторонних VPN при первой установке
+- **DMIT Cloud Premium** routing — США (Лос-Анджелес), Hong Kong и Tokyo (скоро)
 
 ### Как пользоваться
 
-1. **Скачай** OwlMind VPN для своей системы (Mac/Win)
-2. **Открой** приложение
-3. **Нажми "Get Trial"** → введи email
-4. **Жми ⚡ Connect** → готово, VPN включён
-5. На телефоне (Android/iOS) — используй v2rayNG/Streisand с subscription URL из приложения
+1. **Скачай** по ссылке выше
+2. **Открой** приложение, введи email → автоматом 3 дня бесплатно
+3. **Нажми Connect** → введи пароль системы (один раз)
+4. ✅ VPN активен. Telegram, YouTube, что угодно — через Лос-Анджелес.
 
-### Защита от обмана
+### Защита от злоупотреблений
 
-5 уровней защиты:
-
-- Блок одноразовых email (28 доменов)
-- 1 пробный на IP за 30 дней
-- Device fingerprint — 1 пробный на устройство
-- Лимит 2 одновременных IP на конфиг (нельзя расшарить)
-- Лимит 50GB трафика на пробный период
+- Блок одноразовых email-сервисов
+- 1 trial на устройство через fingerprint
+- Лимит одновременных подключений — нельзя расшарить аккаунт на 100 устройств
+- Авто-bot detection через Whop
 
 ---
 
-[Все релизы](https://github.com/MuraveyApp/muravey-releases/releases) · [Сайт](https://muravey.app) · [Поддержка](mailto:support@muravey.app)
+[Все релизы](https://github.com/MuraveyApp/muravey-releases/releases) · [Сайт](https://license.muravey.app/owlmind) · [Поддержка](mailto:support@muravey.app)
